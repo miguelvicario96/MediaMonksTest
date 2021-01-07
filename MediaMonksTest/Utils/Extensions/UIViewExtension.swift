@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIView {
-    func setBorder(cornerRadius: CGFloat) {
+    func setCorner(cornerRadius: CGFloat) {
         self.layer.masksToBounds = false
         self.layer.cornerRadius = cornerRadius
         self.clipsToBounds = true

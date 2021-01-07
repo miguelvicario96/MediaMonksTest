@@ -72,6 +72,10 @@ extension PhotoListViewController: UITableViewDataSource {
 //MARK: - UITableViewDelegate
 extension PhotoListViewController: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let photo = photos?[indexPath.row]
         
+        let view = PhotoDetailRouter.createModule() as! PhotoDetailViewController
+        view.photo = photo
+        self.navigationController?.pushViewController(view, animated: true)
     }
 }

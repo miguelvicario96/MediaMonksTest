@@ -37,8 +37,8 @@ public class InitViewController: UIViewController, InitViewProtocol {
     
     //MARK: - Methods
     private func setUpView() {
-        photoListView.setBorder(cornerRadius: 10)
-        albumListView.setBorder(cornerRadius: 10)
+        photoListView.setCorner(cornerRadius: 10)
+        albumListView.setCorner(cornerRadius: 10)
     }
     
     //MARK: - Actions
