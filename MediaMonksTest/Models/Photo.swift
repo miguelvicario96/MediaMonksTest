@@ -19,4 +19,5 @@ public struct Photo: Codable {
     }
 }
 
+//MARK: - Photos
 public typealias Photos = [Photo]

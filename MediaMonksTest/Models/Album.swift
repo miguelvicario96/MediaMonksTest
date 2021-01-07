@@ -17,4 +17,5 @@ public struct Album: Codable {
     }
 }
 
+//MARK: - Albums
 public typealias Albums = [Album]
