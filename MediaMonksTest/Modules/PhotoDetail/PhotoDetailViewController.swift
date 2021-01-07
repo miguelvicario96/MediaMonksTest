@@ -14,6 +14,11 @@ public class PhotoDetailViewController: UIViewController, PhotoDetailViewProtoco
 
 	var presenter: PhotoDetailPresenterProtocol?
     
+    //MARK: - @IBOutlets
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var idLabel: UILabel!
+    @IBOutlet weak var urlLabel: UILabel!
+    
     //MARK: - Properties
     private lazy var pipView: PipView = {
         return createPipView(imageURL: photo?.url)
@@ -28,8 +33,8 @@ public class PhotoDetailViewController: UIViewController, PhotoDetailViewProtoco
     
     private let pipWidth: CGFloat = 150
     private let pipHeight: CGFloat = 150
-    private let horizontalSpacing: CGFloat = 23
-    private let verticalSpacing: CGFloat = 25
+    private let horizontalSpacing: CGFloat = 15
+    private let verticalSpacing: CGFloat = 40
     
     public var photo: Photo?
 
@@ -48,6 +53,10 @@ public class PhotoDetailViewController: UIViewController, PhotoDetailViewProtoco
     
     //MARK: - Methods
     private func setUpView() {
+        titleLabel.text = photo?.title
+        idLabel.text = "ID: " + String(photo?.id ?? 0)
+        urlLabel.text = "URL: " + (photo?.url ?? "")
+        
         let topLeftView = addPipPositionView()
         topLeftView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: horizontalSpacing).isActive = true
         topLeftView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: verticalSpacing).isActive = true
