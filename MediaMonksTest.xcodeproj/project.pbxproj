@@ -48,6 +48,7 @@
 		EEC760F025A6D29E002FCBA8 /* PhotoDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEC760EA25A6D29E002FCBA8 /* PhotoDetailViewController.xib */; };
 		EEC760F625A6D37A002FCBA8 /* PipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC760F525A6D37A002FCBA8 /* PipView.swift */; };
 		EEC760F925A6DAC1002FCBA8 /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC760F825A6DAC1002FCBA8 /* CGPointExtension.swift */; };
+		EEC7610125A780D1002FCBA8 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC7610025A780D1002FCBA8 /* AlertView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,7 @@
 		EEC760EA25A6D29E002FCBA8 /* PhotoDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoDetailViewController.xib; sourceTree = "<group>"; };
 		EEC760F525A6D37A002FCBA8 /* PipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PipView.swift; path = ../../../../../Documents/PipView.swift; sourceTree = "<group>"; };
 		EEC760F825A6DAC1002FCBA8 /* CGPointExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtension.swift; sourceTree = "<group>"; };
+		EEC7610025A780D1002FCBA8 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,6 +301,7 @@
 		EEC760F325A6D32E002FCBA8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EEC760FF25A78020002FCBA8 /* AlertView */,
 				EEC760F425A6D33F002FCBA8 /* PipView */,
 				EE633B1C25A69CEF002108D0 /* GradientView */,
 			);
@@ -311,6 +314,14 @@
 				EEC760F525A6D37A002FCBA8 /* PipView.swift */,
 			);
 			path = PipView;
+			sourceTree = "<group>";
+		};
+		EEC760FF25A78020002FCBA8 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				EEC7610025A780D1002FCBA8 /* AlertView.swift */,
+			);
+			path = AlertView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,6 +457,7 @@
 				EE633AEA25A68962002108D0 /* AppDelegate.swift in Sources */,
 				EE1F371525A6BC74009EE795 /* AlbumListProtocols.swift in Sources */,
 				EEC760F625A6D37A002FCBA8 /* PipView.swift in Sources */,
+				EEC7610125A780D1002FCBA8 /* AlertView.swift in Sources */,
 				EEC760ED25A6D29E002FCBA8 /* PhotoDetailViewController.swift in Sources */,
 				EE1F371F25A6BEDA009EE795 /* Album.swift in Sources */,
 				EEC760D025A6CA09002FCBA8 /* PhotoListRouter.swift in Sources */,

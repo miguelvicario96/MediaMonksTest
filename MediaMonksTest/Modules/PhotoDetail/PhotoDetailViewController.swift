@@ -11,8 +11,8 @@
 import UIKit
 
 public class PhotoDetailViewController: UIViewController, PhotoDetailViewProtocol {
-
-	var presenter: PhotoDetailPresenterProtocol?
+    
+    var presenter: PhotoDetailPresenterProtocol?
     
     //MARK: - @IBOutlets
     @IBOutlet weak var titleLabel: UILabel!
@@ -37,9 +37,9 @@ public class PhotoDetailViewController: UIViewController, PhotoDetailViewProtoco
     private let verticalSpacing: CGFloat = 40
     
     public var photo: Photo?
-
+    
     //MARK: - Life cycle
-	override public func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         
         setUpView()

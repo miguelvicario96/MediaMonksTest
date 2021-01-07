@@ -55,7 +55,7 @@ extension PhotoListViewController {
     }
     
     func error(message: String) {
-        print(message)
+        AlertView.showAcceptAlert(title: "Error", message: message, viewController: self)
     }
 }
 

@@ -19,7 +19,6 @@ public class GradientView: UIView {
     //MARK: - Life cycle
     override public init(frame: CGRect) {
         super.init(frame: frame)
-       
         commonInit()
     }
     

@@ -35,7 +35,6 @@ public class AlbumListViewController: UIViewController, AlbumListViewProtocol {
     //MARK: - Methods
     private func setUpView() {
         tableView.dataSource = self
-        tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 45
         tableView.register(AlbumTVC.nib, forCellReuseIdentifier: AlbumTVC.identifier)
@@ -55,7 +54,7 @@ extension AlbumListViewController {
     }
     
     func error(message: String) {
-        print(message)
+        AlertView.showAcceptAlert(title: "Error", message: message, viewController: self)
     }
 }
 
@@ -72,9 +71,4 @@ extension AlbumListViewController: UITableViewDataSource {
         cell.setModel(album: album)
         return cell
     }
-}
-
-//MARK: - UITableViewDelegate
-extension AlbumListViewController: UITableViewDelegate {
-    
 }
