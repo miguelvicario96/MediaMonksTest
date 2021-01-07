@@ -40,6 +40,11 @@ public class PhotoListViewController: UIViewController, PhotoListViewProtocol {
         tableView.estimatedRowHeight = 80
         tableView.register(PhotoTVC.nib, forCellReuseIdentifier: PhotoTVC.identifier)
     }
+    
+    //MARK: - @IBActions
+    @IBAction private func goBack(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
 
 }
 

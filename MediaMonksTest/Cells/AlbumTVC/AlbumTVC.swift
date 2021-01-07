@@ -32,7 +32,7 @@ public class AlbumTVC: UITableViewCell {
     
     //MARK: - Methods
     public func setModel(album: Album) {
-        titleLabel.text = album.title
+        titleLabel.text = album.title.capitalized
     }
     
 }

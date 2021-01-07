@@ -22,38 +22,73 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61F-bi-9ya">
-                    <rect key="frame" x="15" y="40" width="80" height="39"/>
+                    <rect key="frame" x="15" y="70" width="80" height="39"/>
                     <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="32"/>
                     <color key="textColor" red="0.2274509804" green="0.37647058820000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zG-Ua-06O">
-                    <rect key="frame" x="15" y="109" width="345" height="30.5"/>
+                    <rect key="frame" x="15" y="139" width="345" height="30.5"/>
                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="25"/>
                     <color key="textColor" red="0.2274509804" green="0.37647058820000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOt-Jm-oYa">
-                    <rect key="frame" x="15" y="149.5" width="345" height="30.5"/>
+                    <rect key="frame" x="15" y="179.5" width="345" height="30.5"/>
                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="25"/>
                     <color key="textColor" red="0.2274509804" green="0.37647058820000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HmP-n8-4AF">
+                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zwj-77-WD3">
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <connections>
+                                <action selector="goBack:" destination="-1" eventType="touchUpInside" id="VB6-WZ-LiG"/>
+                            </connections>
+                        </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backButton" translatesAutoresizingMaskIntoConstraints="NO" id="2BY-To-2Cp">
+                            <rect key="frame" x="15" y="30" width="20" height="20"/>
+                            <color key="tintColor" red="0.2274509804" green="0.37647058820000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="2BY-To-2Cp" secondAttribute="height" multiplier="1:1" id="fid-rA-ec6"/>
+                                <constraint firstAttribute="height" constant="20" id="qfq-i5-wRt"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Zwj-77-WD3" firstAttribute="top" secondItem="HmP-n8-4AF" secondAttribute="top" id="Bo9-Tx-rlZ"/>
+                        <constraint firstAttribute="bottom" secondItem="Zwj-77-WD3" secondAttribute="bottom" id="OK6-M4-Eyp"/>
+                        <constraint firstAttribute="trailing" secondItem="Zwj-77-WD3" secondAttribute="trailing" id="VuR-FY-uyO"/>
+                        <constraint firstAttribute="width" secondItem="HmP-n8-4AF" secondAttribute="height" multiplier="1:1" id="aXI-lS-4x7"/>
+                        <constraint firstAttribute="width" constant="50" id="b2j-c2-56K"/>
+                        <constraint firstAttribute="bottom" secondItem="2BY-To-2Cp" secondAttribute="bottom" id="oGL-sS-uoe"/>
+                        <constraint firstItem="Zwj-77-WD3" firstAttribute="leading" secondItem="HmP-n8-4AF" secondAttribute="leading" id="uyv-l4-E8V"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="gSk-je-MFa"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="0zG-Ua-06O" firstAttribute="leading" secondItem="61F-bi-9ya" secondAttribute="leading" id="0jT-xI-PUc"/>
                 <constraint firstItem="0zG-Ua-06O" firstAttribute="top" secondItem="61F-bi-9ya" secondAttribute="bottom" constant="30" id="Ahy-Nm-vf9"/>
+                <constraint firstItem="HmP-n8-4AF" firstAttribute="top" secondItem="gSk-je-MFa" secondAttribute="top" id="QZI-Sp-Wyb"/>
+                <constraint firstItem="HmP-n8-4AF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Rmh-Bl-dLe"/>
                 <constraint firstAttribute="trailing" secondItem="VOt-Jm-oYa" secondAttribute="trailing" constant="15" id="U52-fi-7iZ"/>
                 <constraint firstItem="VOt-Jm-oYa" firstAttribute="top" secondItem="0zG-Ua-06O" secondAttribute="bottom" constant="10" id="YWX-8f-K0j"/>
+                <constraint firstItem="61F-bi-9ya" firstAttribute="top" secondItem="HmP-n8-4AF" secondAttribute="bottom" constant="20" id="c2y-mK-4Xh"/>
+                <constraint firstItem="2BY-To-2Cp" firstAttribute="leading" secondItem="61F-bi-9ya" secondAttribute="leading" id="dAK-aT-7l6"/>
                 <constraint firstItem="VOt-Jm-oYa" firstAttribute="leading" secondItem="61F-bi-9ya" secondAttribute="leading" id="eO6-69-CiL"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="61F-bi-9ya" secondAttribute="trailing" constant="15" id="hpe-bC-GGi"/>
-                <constraint firstItem="61F-bi-9ya" firstAttribute="top" secondItem="gSk-je-MFa" secondAttribute="top" constant="40" id="mBG-tb-cxS"/>
                 <constraint firstAttribute="trailing" secondItem="0zG-Ua-06O" secondAttribute="trailing" constant="15" id="trZ-XH-Bdp"/>
                 <constraint firstItem="61F-bi-9ya" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="ylj-ml-bMl"/>
             </constraints>
-            <point key="canvasLocation" x="140" y="86"/>
+            <point key="canvasLocation" x="140" y="85.907046476761622"/>
         </view>
     </objects>
+    <resources>
+        <image name="backButton" width="194" height="322"/>
+    </resources>
 </document>

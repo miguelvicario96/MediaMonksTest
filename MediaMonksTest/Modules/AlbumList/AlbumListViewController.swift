@@ -43,7 +43,7 @@ public class AlbumListViewController: UIViewController, AlbumListViewProtocol {
     
     //MARK: - @IBActions
     @IBAction private func goBack(_ sender: UIButton) {
-        
+        self.navigationController?.popViewController(animated: true)
     }
     
 }

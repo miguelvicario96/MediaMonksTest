@@ -40,7 +40,7 @@ public class PhotoTVC: UITableViewCell {
         photoImage.kf.indicatorType = .activity
         photoImage.kf.setImage(with: url)
         
-        photoNameLabel.text = photo.title
+        photoNameLabel.text = photo.title.capitalized
     }
     
 }

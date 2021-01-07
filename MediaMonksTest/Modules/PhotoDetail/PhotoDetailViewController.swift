@@ -53,7 +53,7 @@ public class PhotoDetailViewController: UIViewController, PhotoDetailViewProtoco
     
     //MARK: - Methods
     private func setUpView() {
-        titleLabel.text = photo?.title
+        titleLabel.text = photo?.title.capitalized
         idLabel.text = "ID: " + String(photo?.id ?? 0)
         urlLabel.text = "URL: " + (photo?.url ?? "")
         
@@ -119,6 +119,11 @@ public class PhotoDetailViewController: UIViewController, PhotoDetailViewProtoco
     private func relativeVelocity(forVelocity velocity: CGFloat, from currentValue: CGFloat, to targetValue: CGFloat) -> CGFloat {
         guard currentValue - targetValue != 0 else { return 0 }
         return velocity / (targetValue - currentValue)
+    }
+    
+    //MARK: - @IBActions
+    @IBAction private func goBack(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     //MARK: - Actions
