@@ -27,4 +27,16 @@ public class InitRouter: InitWireframeProtocol {
         
         return view
     }
+    
+    //MARK: - GoToPhotoList
+    func goToPhotoList(nav: UINavigationController?) {
+        let view = PhotoListRouter.createModule()
+        nav?.pushViewController(view, animated: true)
+    }
+    
+    //MARK: - GoToAlbumList
+    func goToAlbumList(nav: UINavigationController?) {
+        let view = AlbumListRouter.createModule()
+        nav?.pushViewController(view, animated: true)
+    }
 }

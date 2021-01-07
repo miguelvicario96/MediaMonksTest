@@ -18,6 +18,7 @@ public class InitViewController: UIViewController, InitViewProtocol {
     @IBOutlet weak var containerView: GradientView!
     @IBOutlet weak var photoListView: UIView!
     @IBOutlet weak var albumListView: UIView!
+    @IBOutlet weak var headerContainerView: UIView!
     
     //MARK: - Properties
     var gradientView: GradientView!
@@ -37,18 +38,17 @@ public class InitViewController: UIViewController, InitViewProtocol {
     
     //MARK: - Methods
     private func setUpView() {
-        photoListView.setCorner(cornerRadius: 10)
-        albumListView.setCorner(cornerRadius: 10)
+        headerContainerView.roundCorners(corners: [.layerMinXMaxYCorner, .layerMaxXMaxYCorner], radius: 30.0)
+        photoListView.setCorner(cornerRadius: 10.0)
+        albumListView.setCorner(cornerRadius: 10.0)
     }
     
     //MARK: - Actions
     @IBAction private func goToPhotoList(_ sender: UIButton) {
-        let view = PhotoListRouter.createModule()
-        self.navigationController?.pushViewController(view, animated: true)
+        presenter?.goToPhotoList(nav: self.navigationController)
     }
     
     @IBAction private func goToAlbumList(_ sender: UIButton) {
-        let view = AlbumListRouter.createModule()
-        self.navigationController?.pushViewController(view, animated: true)
+        presenter?.goToAlbumList(nav: self.navigationController)
     }
 }

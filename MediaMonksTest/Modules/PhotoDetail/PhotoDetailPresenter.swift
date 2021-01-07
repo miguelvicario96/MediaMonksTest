@@ -22,4 +22,8 @@ public class PhotoDetailPresenter: PhotoDetailPresenterProtocol {
         self.router = router
     }
 
+    //MARK: - GoBack
+    func goBack(nav: UINavigationController?) {
+        router.goBack(nav: nav)
+    }
 }

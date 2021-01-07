@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="albumListView" destination="955-9Z-qJ4" id="vDx-G5-BcD"/>
                 <outlet property="containerView" destination="b1Z-hQ-22e" id="QRn-e7-DZ6"/>
+                <outlet property="headerContainerView" destination="4pG-dj-lH2" id="QLA-Wd-pPX"/>
                 <outlet property="photoListView" destination="iag-de-gRg" id="f0P-37-Alv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -25,26 +26,37 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b1Z-hQ-22e" customClass="GradientView" customModule="MediaMonksTest" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Media Monks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHO-c2-0bE">
-                            <rect key="frame" x="15" y="40" width="233" height="39"/>
-                            <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="32"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EVh-Dr-Xqc">
-                            <rect key="frame" x="87.5" y="219" width="200" height="180"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4pG-dj-lH2">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Media Monks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHO-c2-0bE">
+                                    <rect key="frame" x="15" y="60" width="233" height="39"/>
+                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="32"/>
+                                    <color key="textColor" red="0.2274509804" green="0.37647058820000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="yHO-c2-0bE" firstAttribute="leading" secondItem="4pG-dj-lH2" secondAttribute="leading" constant="15" id="4wk-CG-GLy"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yHO-c2-0bE" secondAttribute="trailing" constant="15" id="HFn-uj-RAW"/>
+                                <constraint firstAttribute="height" constant="200" id="t0a-LV-vha"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EVh-Dr-Xqc">
+                            <rect key="frame" x="15" y="240" width="345" height="80"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iag-de-gRg">
-                                    <rect key="frame" x="0.0" y="0.0" width="200" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="162.5" height="80"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvG-9l-fSe">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="162.5" height="80"/>
                                             <connections>
                                                 <action selector="goToPhotoList:" destination="-1" eventType="touchUpInside" id="Ljs-j7-nPP"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ln2-ZQ-KFC">
-                                            <rect key="frame" x="50.5" y="28" width="99" height="24.5"/>
+                                            <rect key="frame" x="32" y="28" width="99" height="24.5"/>
                                             <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
                                             <color key="textColor" red="0.22745098039215686" green="0.37647058823529411" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -62,16 +74,16 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="955-9Z-qJ4">
-                                    <rect key="frame" x="0.0" y="100" width="200" height="80"/>
+                                    <rect key="frame" x="182.5" y="0.0" width="162.5" height="80"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTs-6X-zf2">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="162.5" height="80"/>
                                             <connections>
                                                 <action selector="goToAlbumList:" destination="-1" eventType="touchUpInside" id="exp-00-5MZ"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCZ-Te-3Ha">
-                                            <rect key="frame" x="47" y="28" width="106" height="24.5"/>
+                                            <rect key="frame" x="28.5" y="28" width="106" height="24.5"/>
                                             <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
                                             <color key="textColor" red="0.22745098039215686" green="0.37647058823529411" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -88,17 +100,16 @@
                                     </constraints>
                                 </view>
                             </subviews>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="200" id="sQi-dN-BSV"/>
-                            </constraints>
                         </stackView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="EVh-Dr-Xqc" firstAttribute="top" secondItem="yHO-c2-0bE" secondAttribute="bottom" constant="140" id="8jc-6W-9KU"/>
-                        <constraint firstItem="EVh-Dr-Xqc" firstAttribute="centerX" secondItem="b1Z-hQ-22e" secondAttribute="centerX" id="HcN-HC-ghP"/>
-                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yHO-c2-0bE" secondAttribute="trailing" constant="15" id="dc7-64-oTc"/>
-                        <constraint firstItem="yHO-c2-0bE" firstAttribute="leading" secondItem="b1Z-hQ-22e" secondAttribute="leading" constant="15" id="dtO-3g-iuD"/>
+                        <constraint firstItem="EVh-Dr-Xqc" firstAttribute="top" secondItem="4pG-dj-lH2" secondAttribute="bottom" constant="40" id="3sE-Nb-sln"/>
+                        <constraint firstItem="4pG-dj-lH2" firstAttribute="top" secondItem="b1Z-hQ-22e" secondAttribute="top" id="GDw-2d-Vy7"/>
+                        <constraint firstItem="4pG-dj-lH2" firstAttribute="leading" secondItem="b1Z-hQ-22e" secondAttribute="leading" id="USc-LH-rkb"/>
+                        <constraint firstAttribute="trailing" secondItem="EVh-Dr-Xqc" secondAttribute="trailing" constant="15" id="Zbs-zC-1b0"/>
+                        <constraint firstAttribute="trailing" secondItem="4pG-dj-lH2" secondAttribute="trailing" id="eSb-I1-wGj"/>
+                        <constraint firstItem="EVh-Dr-Xqc" firstAttribute="leading" secondItem="b1Z-hQ-22e" secondAttribute="leading" constant="15" id="uh2-P3-1sn"/>
                     </constraints>
                 </view>
             </subviews>
@@ -107,9 +118,9 @@
             <constraints>
                 <constraint firstItem="b1Z-hQ-22e" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Eb2-BG-c9Z"/>
                 <constraint firstAttribute="trailing" secondItem="b1Z-hQ-22e" secondAttribute="trailing" id="Kd4-sa-crB"/>
-                <constraint firstItem="yHO-c2-0bE" firstAttribute="top" secondItem="yp9-Xi-trP" secondAttribute="top" constant="40" id="QDX-HI-aZe"/>
                 <constraint firstAttribute="bottom" secondItem="b1Z-hQ-22e" secondAttribute="bottom" id="Urd-4B-jXp"/>
                 <constraint firstItem="b1Z-hQ-22e" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="jQi-eD-QSV"/>
+                <constraint firstItem="yHO-c2-0bE" firstAttribute="top" secondItem="yp9-Xi-trP" secondAttribute="top" constant="60" id="nq9-9j-Wch"/>
             </constraints>
             <point key="canvasLocation" x="-162.40000000000001" y="120.98950524737631"/>
         </view>

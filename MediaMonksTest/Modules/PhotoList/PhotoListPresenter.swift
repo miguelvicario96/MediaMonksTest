@@ -36,5 +36,15 @@ public class PhotoListPresenter: PhotoListPresenterProtocol {
     func error(message: String) {
         view?.error(message: message)
     }
+    
+    //MARK: - GoToPhotoDetail
+    func goToPhotoDetail(nav: UINavigationController?, photo: Photo?) {
+        router.goToPhotoDetail(nav: nav, photo: photo)
+    }
+    
+    //MARK: - GoBack
+    func goBack(nav: UINavigationController?) {
+        router.goBack(nav: nav)
+    }
 
 }

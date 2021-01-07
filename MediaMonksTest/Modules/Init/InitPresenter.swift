@@ -21,5 +21,15 @@ public class InitPresenter: InitPresenterProtocol {
         self.interactor = interactor
         self.router = router
     }
+    
+    //MARK: - GoToPhotoList
+    func goToPhotoList(nav: UINavigationController?) {
+        router.goToPhotoList(nav: nav)
+    }
+    
+    //MARK: - GoToAlbumList
+    func goToAlbumList(nav: UINavigationController?) {
+        router.goToAlbumList(nav: nav)
+    }
 
 }

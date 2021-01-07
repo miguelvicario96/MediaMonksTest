@@ -27,4 +27,16 @@ public class PhotoListRouter: PhotoListWireframeProtocol {
         
         return view
     }
+    
+    //MARK: - GoToPhotoDetail
+    func goToPhotoDetail(nav: UINavigationController?, photo: Photo?) {
+        let view = PhotoDetailRouter.createModule() as! PhotoDetailViewController
+        view.photo = photo
+        nav?.pushViewController(view, animated: true)
+    }
+    
+    //MARK: - GoBack
+    func goBack(nav: UINavigationController?) {
+        nav?.popViewController(animated: true)
+    }
 }

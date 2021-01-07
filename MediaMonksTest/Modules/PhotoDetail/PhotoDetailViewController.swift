@@ -119,7 +119,7 @@ public class PhotoDetailViewController: UIViewController, PhotoDetailViewProtoco
     
     //MARK: - @IBActions
     @IBAction private func goBack(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+        presenter?.goBack(nav: self.navigationController)
     }
     
     //MARK: - Actions

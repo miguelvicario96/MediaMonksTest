@@ -27,4 +27,9 @@ public class PhotoDetailRouter: PhotoDetailWireframeProtocol {
         
         return view
     }
+    
+    //MARK: - GoBack
+    func goBack(nav: UINavigationController?) {
+        nav?.popViewController(animated: true)
+    }
 }

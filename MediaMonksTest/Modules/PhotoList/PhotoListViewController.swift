@@ -43,7 +43,7 @@ public class PhotoListViewController: UIViewController, PhotoListViewProtocol {
     
     //MARK: - @IBActions
     @IBAction private func goBack(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+        presenter?.goBack(nav: self.navigationController)
     }
 
 }
@@ -78,9 +78,6 @@ extension PhotoListViewController: UITableViewDataSource {
 extension PhotoListViewController: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let photo = photos?[indexPath.row]
-        
-        let view = PhotoDetailRouter.createModule() as! PhotoDetailViewController
-        view.photo = photo
-        self.navigationController?.pushViewController(view, animated: true)
+        presenter?.goToPhotoDetail(nav: self.navigationController, photo: photo)
     }
 }

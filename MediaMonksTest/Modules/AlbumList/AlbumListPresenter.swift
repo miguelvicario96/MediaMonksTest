@@ -36,5 +36,10 @@ public class AlbumListPresenter: AlbumListPresenterProtocol {
     func error(message: String) {
         view?.error(message: message)
     }
+    
+    //MARK: - GoBack
+    func goBack(nav: UINavigationController?) {
+        router.goBack(nav: nav)
+    }
 
 }

@@ -29,6 +29,12 @@ public class PhotoTVC: UITableViewCell {
         
     }
     
+    override public func setSelected(_ selected: Bool, animated: Bool) {
+        if selected {
+            self.layer.backgroundColor = UIColor.white.cgColor
+        }
+    }
+    
     override public func prepareForReuse() {
         photoImage.image = nil
         photoNameLabel.text = nil

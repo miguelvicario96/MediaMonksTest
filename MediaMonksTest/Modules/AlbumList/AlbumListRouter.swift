@@ -27,4 +27,9 @@ public class AlbumListRouter: AlbumListWireframeProtocol {
         
         return view
     }
+    
+    //MARK: - GoBack
+    func goBack(nav: UINavigationController?) {
+        nav?.popViewController(animated: true)
+    }
 }
