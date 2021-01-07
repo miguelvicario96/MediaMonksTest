@@ -26,7 +26,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Media Monks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHO-c2-0bE">
-                            <rect key="frame" x="15" y="40" width="345" height="39"/>
+                            <rect key="frame" x="15" y="40" width="233" height="39"/>
                             <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="32"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -97,7 +97,7 @@
                     <constraints>
                         <constraint firstItem="EVh-Dr-Xqc" firstAttribute="top" secondItem="yHO-c2-0bE" secondAttribute="bottom" constant="140" id="8jc-6W-9KU"/>
                         <constraint firstItem="EVh-Dr-Xqc" firstAttribute="centerX" secondItem="b1Z-hQ-22e" secondAttribute="centerX" id="HcN-HC-ghP"/>
-                        <constraint firstAttribute="trailing" secondItem="yHO-c2-0bE" secondAttribute="trailing" constant="15" id="dc7-64-oTc"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yHO-c2-0bE" secondAttribute="trailing" constant="15" id="dc7-64-oTc"/>
                         <constraint firstItem="yHO-c2-0bE" firstAttribute="leading" secondItem="b1Z-hQ-22e" secondAttribute="leading" constant="15" id="dtO-3g-iuD"/>
                     </constraints>
                 </view>

@@ -23,7 +23,7 @@ public class NetworkConnection {
     private let baseURL = "https://jsonplaceholder.typicode.com/"
     
     //MARK: - Methods
-    public func makeRequest<T: Codable>(withMethod method: Method, data: T.Type) {
+    public func makeRequest<T: Codable>(withMethod method: Method, dataType: T.Type) {
         let urlString: String = baseURL + method.rawValue
         let manager = Alamofire.Session.default
         manager.session.configuration.timeoutIntervalForRequest = 30.0

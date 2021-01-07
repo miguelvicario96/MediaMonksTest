@@ -47,6 +47,7 @@ public class InitViewController: UIViewController, InitViewProtocol {
     }
     
     @IBAction private func goToAlbumList(_ sender: UIButton) {
-        
+        let view = AlbumListRouter.createModule()
+        self.navigationController?.pushViewController(view, animated: true)
     }
 }
