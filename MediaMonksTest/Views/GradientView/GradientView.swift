@@ -13,12 +13,14 @@ public class GradientView: UIView {
     private var gradientLayer: CAGradientLayer?
     private var gradientSet = [[CGColor]]()
     private var currentGradient = 0
-    private let gradientOne = UIColor(red: 0.09, green: 0.13, blue: 0.16, alpha: 1.00).cgColor
-    private let gradientTwo = UIColor(red: 0.23, green: 0.38, blue: 0.45, alpha: 1.00).cgColor
+    private let gradientOne = UIColor.darkBlue.cgColor
+    private let gradientTwo = UIColor.midBlue.cgColor
+    private let gradientThree = UIColor.lightBlue.cgColor
     
     //MARK: - Life cycle
     override public init(frame: CGRect) {
         super.init(frame: frame)
+        
         commonInit()
     }
     
@@ -42,7 +44,8 @@ public class GradientView: UIView {
     private func commonInit() {
         gradientLayer = self.layer as? CAGradientLayer
         gradientSet.append([gradientOne, gradientTwo])
-        gradientSet.append([gradientTwo, gradientOne])
+        gradientSet.append([gradientTwo, gradientThree])
+        gradientSet.append([gradientThree, gradientOne])
 
         gradientLayer?.colors = gradientSet[currentGradient]
         gradientLayer?.startPoint = CGPoint(x: 0, y: 0)

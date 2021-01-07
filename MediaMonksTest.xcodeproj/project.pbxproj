@@ -49,6 +49,7 @@
 		EEC760F625A6D37A002FCBA8 /* PipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC760F525A6D37A002FCBA8 /* PipView.swift */; };
 		EEC760F925A6DAC1002FCBA8 /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC760F825A6DAC1002FCBA8 /* CGPointExtension.swift */; };
 		EEC7610125A780D1002FCBA8 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC7610025A780D1002FCBA8 /* AlertView.swift */; };
+		EEC7610425A7849B002FCBA8 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC7610325A7849B002FCBA8 /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 		EEC760F525A6D37A002FCBA8 /* PipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PipView.swift; path = ../../../../../Documents/PipView.swift; sourceTree = "<group>"; };
 		EEC760F825A6DAC1002FCBA8 /* CGPointExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtension.swift; sourceTree = "<group>"; };
 		EEC7610025A780D1002FCBA8 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		EEC7610325A7849B002FCBA8 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +255,7 @@
 			children = (
 				EE7762F325A6AE5300EB521A /* UIViewExtension.swift */,
 				EEC760F825A6DAC1002FCBA8 /* CGPointExtension.swift */,
+				EEC7610325A7849B002FCBA8 /* UIColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				EEC7610125A780D1002FCBA8 /* AlertView.swift in Sources */,
 				EEC760ED25A6D29E002FCBA8 /* PhotoDetailViewController.swift in Sources */,
 				EE1F371F25A6BEDA009EE795 /* Album.swift in Sources */,
+				EEC7610425A7849B002FCBA8 /* UIColorExtension.swift in Sources */,
 				EEC760D025A6CA09002FCBA8 /* PhotoListRouter.swift in Sources */,
 				EEC760EC25A6D29E002FCBA8 /* PhotoDetailRouter.swift in Sources */,
 				EE1F371225A6BC74009EE795 /* AlbumListPresenter.swift in Sources */,

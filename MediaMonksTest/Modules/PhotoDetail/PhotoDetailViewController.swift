@@ -34,7 +34,7 @@ public class PhotoDetailViewController: UIViewController, PhotoDetailViewProtoco
     private let pipWidth: CGFloat = 150
     private let pipHeight: CGFloat = 150
     private let horizontalSpacing: CGFloat = 15
-    private let verticalSpacing: CGFloat = 40
+    private let verticalSpacing: CGFloat = 30
     
     public var photo: Photo?
     
@@ -56,10 +56,6 @@ public class PhotoDetailViewController: UIViewController, PhotoDetailViewProtoco
         titleLabel.text = photo?.title.capitalized
         idLabel.text = "ID: " + String(photo?.id ?? 0)
         urlLabel.text = "URL: " + (photo?.url ?? "")
-        
-        let topLeftView = addPipPositionView()
-        topLeftView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: horizontalSpacing).isActive = true
-        topLeftView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: verticalSpacing).isActive = true
         
         let topRightView = addPipPositionView()
         topRightView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -horizontalSpacing).isActive = true
