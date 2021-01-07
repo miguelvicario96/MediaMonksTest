@@ -43,7 +43,8 @@ public class InitViewController: UIViewController, InitViewProtocol {
     
     //MARK: - Actions
     @IBAction private func goToPhotoList(_ sender: UIButton) {
-        
+        let view = PhotoListRouter.createModule()
+        self.navigationController?.pushViewController(view, animated: true)
     }
     
     @IBAction private func goToAlbumList(_ sender: UIButton) {

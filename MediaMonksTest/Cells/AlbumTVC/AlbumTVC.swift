@@ -26,6 +26,10 @@ public class AlbumTVC: UITableViewCell {
         super.awakeFromNib()
     }
     
+    override public func prepareForReuse() {
+        titleLabel.text = nil
+    }
+    
     //MARK: - Methods
     public func setModel(album: Album) {
         titleLabel.text = album.title

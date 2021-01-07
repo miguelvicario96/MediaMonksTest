@@ -1,5 +1,5 @@
 //
-//  AlbumListViewController.swift
+//  PhotoListViewController.swift
 //  MediaMonksTest
 //
 //  Created Miguel Vicario on 06/01/21.
@@ -10,9 +10,9 @@
 
 import UIKit
 
-public class AlbumListViewController: UIViewController, AlbumListViewProtocol {
+public class PhotoListViewController: UIViewController, PhotoListViewProtocol {
 
-	var presenter: AlbumListPresenterProtocol?
+	var presenter: PhotoListPresenterProtocol?
     
     //MARK: - @IBOutlets
     @IBOutlet weak var tableView: UITableView! {
@@ -20,7 +20,7 @@ public class AlbumListViewController: UIViewController, AlbumListViewProtocol {
     }
     
     //MARK: - Properties
-    var albums: Albums? {
+    var photos: Photos? {
         didSet { tableView.reloadData() }
     }
 
@@ -29,7 +29,7 @@ public class AlbumListViewController: UIViewController, AlbumListViewProtocol {
         super.viewDidLoad()
         
         setUpView()
-        presenter?.makeRequest(method: .albums)
+        presenter?.makeRequest(method: .photos)
     }
     
     //MARK: - Methods
@@ -37,21 +37,16 @@ public class AlbumListViewController: UIViewController, AlbumListViewProtocol {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 45
-        tableView.register(AlbumTVC.nib, forCellReuseIdentifier: AlbumTVC.identifier)
+        tableView.estimatedRowHeight = 80
+        tableView.register(PhotoTVC.nib, forCellReuseIdentifier: PhotoTVC.identifier)
     }
-    
-    //MARK: - @IBActions
-    @IBAction private func goBack(_ sender: UIButton) {
-        
-    }
-    
+
 }
 
 //MARK: - PresenterMethods
-extension AlbumListViewController {
-    func receivedData(data: Albums) {
-        albums = data
+extension PhotoListViewController {
+    func receivedData(data: Photos) {
+        photos = data
     }
     
     func error(message: String) {
@@ -60,21 +55,23 @@ extension AlbumListViewController {
 }
 
 //MARK: - UITableViewDataSource
-extension AlbumListViewController: UITableViewDataSource {
+extension PhotoListViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let numberOfRows = albums?.count else { return 0 }
+        guard let numberOfRows = photos?.count else { return 0 }
         return numberOfRows
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: AlbumTVC.identifier, for: indexPath) as! AlbumTVC
-        guard let album = albums?[indexPath.row] else { return UITableViewCell() }
-        cell.setModel(album: album)
+        let cell = tableView.dequeueReusableCell(withIdentifier: PhotoTVC.identifier, for: indexPath) as! PhotoTVC
+        guard let photo = photos?[indexPath.row] else { return UITableViewCell() }
+        cell.setModel(photo: photo)
         return cell
     }
 }
 
 //MARK: - UITableViewDelegate
-extension AlbumListViewController: UITableViewDelegate {
-    
+extension PhotoListViewController: UITableViewDelegate {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
 }

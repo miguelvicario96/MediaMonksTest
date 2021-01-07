@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoListViewController" customModule="MediaMonksTest" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="X4g-ZE-lPm" id="8ML-TT-2iV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgg-cv-U0E">
+                    <rect key="frame" x="15" y="40" width="181" height="39"/>
+                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="32"/>
+                    <color key="textColor" red="0.2274509804" green="0.37647058820000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X4g-ZE-lPm">
+                    <rect key="frame" x="0.0" y="99" width="375" height="568"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="LHB-BI-sMh"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="X4g-ZE-lPm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3F5-uY-Y7Z"/>
+                <constraint firstItem="mgg-cv-U0E" firstAttribute="top" secondItem="LHB-BI-sMh" secondAttribute="top" constant="40" id="Aob-jJ-GBu"/>
+                <constraint firstItem="X4g-ZE-lPm" firstAttribute="top" secondItem="mgg-cv-U0E" secondAttribute="bottom" constant="20" id="CLS-bY-NYP"/>
+                <constraint firstAttribute="trailing" secondItem="X4g-ZE-lPm" secondAttribute="trailing" id="LFj-hl-l3L"/>
+                <constraint firstItem="mgg-cv-U0E" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="Ya0-Hj-HTm"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mgg-cv-U0E" secondAttribute="trailing" constant="15" id="iz5-od-bsA"/>
+                <constraint firstAttribute="bottom" secondItem="X4g-ZE-lPm" secondAttribute="bottom" id="w9X-To-a2k"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="86"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
