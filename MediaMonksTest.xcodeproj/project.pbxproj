@@ -16,6 +16,7 @@
 		EE1F371625A6BC74009EE795 /* AlbumListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1F371025A6BC74009EE795 /* AlbumListInteractor.swift */; };
 		EE1F371725A6BC74009EE795 /* AlbumListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE1F371125A6BC74009EE795 /* AlbumListViewController.xib */; };
 		EE1F371F25A6BEDA009EE795 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1F371E25A6BEDA009EE795 /* Album.swift */; };
+		EE4ACC1D25BB30E20042BFF5 /* PipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4ACC1C25BB30E20042BFF5 /* PipView.swift */; };
 		EE633AEA25A68962002108D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE633AE925A68962002108D0 /* AppDelegate.swift */; };
 		EE633AF325A68966002108D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE633AF225A68966002108D0 /* Assets.xcassets */; };
 		EE633AF625A68966002108D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE633AF425A68966002108D0 /* LaunchScreen.storyboard */; };
@@ -46,7 +47,6 @@
 		EEC760EE25A6D29E002FCBA8 /* PhotoDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC760E825A6D29E002FCBA8 /* PhotoDetailProtocols.swift */; };
 		EEC760EF25A6D29E002FCBA8 /* PhotoDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC760E925A6D29E002FCBA8 /* PhotoDetailInteractor.swift */; };
 		EEC760F025A6D29E002FCBA8 /* PhotoDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEC760EA25A6D29E002FCBA8 /* PhotoDetailViewController.xib */; };
-		EEC760F625A6D37A002FCBA8 /* PipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC760F525A6D37A002FCBA8 /* PipView.swift */; };
 		EEC760F925A6DAC1002FCBA8 /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC760F825A6DAC1002FCBA8 /* CGPointExtension.swift */; };
 		EEC7610125A780D1002FCBA8 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC7610025A780D1002FCBA8 /* AlertView.swift */; };
 		EEC7610425A7849B002FCBA8 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC7610325A7849B002FCBA8 /* UIColorExtension.swift */; };
@@ -64,6 +64,7 @@
 		EE1F371025A6BC74009EE795 /* AlbumListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListInteractor.swift; sourceTree = "<group>"; };
 		EE1F371125A6BC74009EE795 /* AlbumListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumListViewController.xib; sourceTree = "<group>"; };
 		EE1F371E25A6BEDA009EE795 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		EE4ACC1C25BB30E20042BFF5 /* PipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipView.swift; sourceTree = "<group>"; };
 		EE633AE625A68962002108D0 /* MediaMonksTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaMonksTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE633AE925A68962002108D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE633AF225A68966002108D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,7 +97,6 @@
 		EEC760E825A6D29E002FCBA8 /* PhotoDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailProtocols.swift; sourceTree = "<group>"; };
 		EEC760E925A6D29E002FCBA8 /* PhotoDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailInteractor.swift; sourceTree = "<group>"; };
 		EEC760EA25A6D29E002FCBA8 /* PhotoDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoDetailViewController.xib; sourceTree = "<group>"; };
-		EEC760F525A6D37A002FCBA8 /* PipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PipView.swift; path = ../../../../../Documents/PipView.swift; sourceTree = "<group>"; };
 		EEC760F825A6DAC1002FCBA8 /* CGPointExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtension.swift; sourceTree = "<group>"; };
 		EEC7610025A780D1002FCBA8 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		EEC7610325A7849B002FCBA8 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -164,6 +164,14 @@
 				EEC760D625A6CB32002FCBA8 /* Photo.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		EE4ACC1725BB30D70042BFF5 /* PipView */ = {
+			isa = PBXGroup;
+			children = (
+				EE4ACC1C25BB30E20042BFF5 /* PipView.swift */,
+			);
+			path = PipView;
 			sourceTree = "<group>";
 		};
 		EE633ADD25A68962002108D0 = {
@@ -304,19 +312,11 @@
 		EEC760F325A6D32E002FCBA8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EE4ACC1725BB30D70042BFF5 /* PipView */,
 				EEC760FF25A78020002FCBA8 /* AlertView */,
-				EEC760F425A6D33F002FCBA8 /* PipView */,
 				EE633B1C25A69CEF002108D0 /* GradientView */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		EEC760F425A6D33F002FCBA8 /* PipView */ = {
-			isa = PBXGroup;
-			children = (
-				EEC760F525A6D37A002FCBA8 /* PipView.swift */,
-			);
-			path = PipView;
 			sourceTree = "<group>";
 		};
 		EEC760FF25A78020002FCBA8 /* AlertView */ = {
@@ -446,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE4ACC1D25BB30E20042BFF5 /* PipView.swift in Sources */,
 				EEC760EE25A6D29E002FCBA8 /* PhotoDetailProtocols.swift in Sources */,
 				EEC760EB25A6D29E002FCBA8 /* PhotoDetailPresenter.swift in Sources */,
 				EEC760F925A6DAC1002FCBA8 /* CGPointExtension.swift in Sources */,
@@ -459,7 +460,6 @@
 				EE633B0725A68C1A002108D0 /* InitPresenter.swift in Sources */,
 				EE633AEA25A68962002108D0 /* AppDelegate.swift in Sources */,
 				EE1F371525A6BC74009EE795 /* AlbumListProtocols.swift in Sources */,
-				EEC760F625A6D37A002FCBA8 /* PipView.swift in Sources */,
 				EEC7610125A780D1002FCBA8 /* AlertView.swift in Sources */,
 				EEC760ED25A6D29E002FCBA8 /* PhotoDetailViewController.swift in Sources */,
 				EE1F371F25A6BEDA009EE795 /* Album.swift in Sources */,
